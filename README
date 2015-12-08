@@ -1,0 +1,33 @@
+Gets a series and apply it into a repository
+
+Examples:
+
+# take last series and apply into the cairo project
+
+> pwpatch --pw-project cairo
+getting mboxs since: last
+        mbox /tmp/testpatch/cairo/mbox/mbox-134-2
+patching the repo /tmp/testpatch/cairo/repo
+        patch /tmp/testpatch/cairo/mbox/mbox-134-2 applied
+
+# List possible arguments
+
+> pwpatch --help
+usage: pwpatch [-h] [--test-file TEST_FILE] [--test-directory TEST_DIR]
+               [--pw-url PW_URL] [--workspace-directory WORKSPACE_DIR]
+               [--pw-project PW_PROJECT] [--series SERIES] [--since SINCE]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --test-file TEST_FILE
+                        File containing the a test case to execute
+  --test-directory TEST_DIR
+                        Directory containing the test cases to execute
+  --pw-url PW_URL       Patchwork web instance
+  --workspace-directory WORKSPACE_DIR
+                        The workspace directory
+  --pw-project PW_PROJECT
+                        Patchwork project
+  --series SERIES       Specify the series number. If present, the "--since"
+                        argument is ignored
+  --since SINCE         Specify the range of series to tests
